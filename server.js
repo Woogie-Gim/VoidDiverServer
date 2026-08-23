@@ -45,7 +45,7 @@ app.get('/ranking', (req, res) => {
 });
 
 // 서버 실행
-const PORT = 3000;
+const PORT = process.env.PORT || 3000; // Render가 주는 포트, 없으면 로컬 3000
 app.listen(PORT, () => {
-  console.log(`Ranking server running on http://localhost:${PORT}`);
+  console.log(`Ranking server running on port ${PORT}`);
 });
